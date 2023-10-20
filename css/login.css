@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/8774400/pexels-photo-8774400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    overflow-y: hidden;
+}
+header {
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5 ease;
+}
+header .brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation {
+    position: relative;
+}
+header .navigation .navigation-items a {
+    position: relative;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    width: 0;
+    height: 3px; /* Corregir el valor 'px' aquí */
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    height: 2px;
+}
+.inicio .media-icons {
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    width: 1.4%;
+    top: 39%;
+}
+.inicio .media-icons a{
+    color: #fff;
+    font-size: 1.9em;
+}
+.inicio .media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+.inicio .media-icons a:hover{
+    transform: scale(1.3);
+}
+
+.container-form {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0,0,0,.1);
+    height: 500px;
+    max-width: 900px;
+    transition: all 1s ease;
+    margin: 10px;
+}
+.information {
+    
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #c7eef3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.infor-childs {
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    background-color: #f8f8f8; /* Cambié el fondo para hacerlo más claro */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregué una sombra sutile */
+}
+
+.infor-childs h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.info-childs p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.info-childs input {
+    background-color: #fff; /* Cambié el fondo para hacerlo más claro */
+    outline: none;
+    border: solid 2px #9191bd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #333; /* Cambié el color del texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-childs input:hover {
+    background-color: #9191bd;
+    border: none;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aumenté la opacidad de la sombra en hover */
+}
+.form-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.form-information-childs {
+    padding: 0 30px;  
+}
+.form-information-childs h2 {
+    color: #333;
+    font-size: 2rem;
+}
+.form-information-childs p {
+    color: #555;
+}
+.icons {
+    margin: 15px 0;
+}
+.icons i {
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #333; /* Cambié el color de los iconos para que coincida con el formulario */
+    background-color: #fff; /* Cambié el fondo de los iconos */
+    border: solid thin #333; /* Cambié el borde de los iconos */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icons i:hover {
+    background-color: #7a7a9a; /* Cambié el color de fondo en hover */
+    color: #fff;
+}
+.form {
+    margin: 30px 0 0 0;
+}
+.form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aumenté la opacidad de la sombra */
+}
+.form label input {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f8f8; /* Cambié el fondo para hacerlo más claro */
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+    box-shadow: none; /* Quité la sombra en los campos de entrada */
+}
+.form label i {
+    color: #a7a7a7;
+}
+.form input[type="submit"] {
+    background-color: #9191bd;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aumenté la opacidad de la sombra */
+}
+
+.form input[type="submit"]:hover {
+    background-color: #7a7a9a;
+}
+.hide {
+    position: absolute;
+    transform: translatey(-300%);
+}
+/*responsive*/
+@media screen and (max-width:750px){
+    html {
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:580px){
+    html {
+        font-size: 10px;
+    }
+    
+    .container-form {
+        height: auto;
+        flex-direction: column;
+    }
+    .information {
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0;
+    }
+    .form-information {
+        width: 100%;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0;
+    }
+}
+@media (max-width: 1040px){ 
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        padding: 12px 20px;
+    }
+    section {
+        padding: 100px 20px;
+    }
+    .home .media-icons {
+        right: 15px;
+    }
+    header .navigation {
+       display: none;
+    }
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 67rem;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1,1,1.0.5);
+        body {
+        overflow-x: hidden;
+    }
+    header {
+        padding: 12px 20px;
+    }
+    section {
+        padding: 100px 20px;
+    }
+    .home .media-icons {
+        right: 15px;
+        
+    }
+    header .navigation {
+       display: none;
+       
+    }
+    
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 3rem;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1,1,1.0.5);
+    }
+    .inicio .content a {
+        background: rgba(136, 136, 136, 0.366);
+        backdrop-filter: blur(1.5em);
+        padding: 10px 15px;
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 2rem;
+    }
+    .container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 2rem 1rem;
+	}
+    }
+    header .navigation .navigation-items a {
+        color: #000000;
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+    header .navigation .navigation-items a:before {
+        background: #000000;
+        height: 2px;
+    }
+    header .navigation.active .navigation-items {
+        background: #ffffff;
+        width: 700px;
+        max-width: 800px;
+        margin: 100px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8%;
+        box-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
+    }
+    .menu-btn {
+        background: url(../img/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../img/x.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0,3s ease;
+    }
+}

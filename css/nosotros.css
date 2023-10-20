@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+body {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/6624093/pexels-photo-6624093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+header {
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5 ease;
+}
+header .brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation {
+    position: relative;
+}
+header .navigation .navigation-items a {
+    position: relative;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    width: 0;
+    height: 1%; /* Corregir el valor 'px' aquí */
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    height: 2px;
+}
+/*Todo el diseño de Nosotros*/
+.about-us {
+    position: relative; /* Establecer posición relativa para que los pseudo-elementos sean relativos a este elemento */
+    padding: 23px 0; /* Espaciado interno superior e inferior */
+    text-align: center;
+    margin: 19px 0; /* Margen superior e inferior */
+}
+
+/* Pseudo-elemento ::before para el fondo oscuro */
+.about-us::before {
+    content: ""; /* Contenido vacío necesario para pseudo-elementos */
+    position: absolute; /* Establecer posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-color: rgba(3, 0, 0, 0.399); /* Color de fondo oscuro con opacidad (ajusta el último valor para cambiar la opacidad) */
+    z-index: -1; /* Colocar el fondo detrás del contenido */
+}
+
+/* Estilos para el título h1 en la sección "Nosotros" */
+.about-us h1 {
+    color: #ffffff;
+    font-size: 4em;
+    padding: 20px; /* Añadir espacio interno al h1 */
+    text-align: center;
+    margin: 54px 0; /* Eliminar el margen superior e inferior del h1 */
+}
+
+/* Estilos para la sección "Info" */
+.info {
+    background-color: #ffffff; /* Fondo blanco para la sección "Info" */
+    padding: 50px 0; /* Ajustar el espacio superior e inferior */
+    display: flex; /* Utilizar flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.info-border {
+    border-radius: 20px; /* Bordes redondeados */
+    border: 10px solid #fff; /* Modificar el ancho del borde (en este caso, 10px) */
+    max-width: 800px; /* Ajustar el ancho máximo del contenido (ajusta según tus preferencias) */
+    padding: 30px; /* Ajustar el espacio interior */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.info h2 {
+    color: #00818a;
+    font-size: 1.5em; /* Tamaño del h2 */
+    margin-bottom: 20px; /* Espacio inferior del h2 */
+}
+
+.info p {
+    color: #666;
+    font-size: 1em; /* Tamaño del p */
+    line-height: 1.5;
+    margin-bottom: 10px; /* Espacio inferior del p */
+}
+
+.info h3 {
+    color: #00818a;
+    font-size: 1.2em; /* Tamaño del h3 */
+    margin-bottom: 5px; /* Espacio inferior del h3 */
+}
+/* ********************************** */
+/*               Contenido ;v              */
+/* ********************************** */
+
+.background-section {
+    background-image: url('https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg');
+    background-size: cover;
+    background-position: center top; /* Ajusta la posición del fondo */
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 100%;
+}
+/* Estilos para text-container */
+.main-container {
+    display: flex;
+    flex-direction: row; /* Organiza los elementos en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left
+  }
+  
+  /* Estilos para text-container (Texto y contenido de container-bottom) en la columna izquierda */
+  .text-container {
+    flex: 2; /* Toma todo el espacio disponible */
+    padding: 20px;
+  }
+.text-container h2 {
+    color: #00818a;
+    font-size: 2em;
+    margin-bottom: 10px;
+    
+  }
+.text-container p {
+    color: #080808;
+    font-size: 1.2em;
+    line-height: 2.4rem;
+}  
+.container-bottom {
+    display: flex;
+    flex-direction: row;/* Organiza los elementos en una columna */
+    gap: 1rem;
+  }
+  
+  .container-bottom span {
+    color: #6d6c6c;
+    background-color: #fff;
+    padding: 0.7rem 3rem;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container-bottom span:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container-bottom span.active {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.footer {
+	background-color:#fff;
+    border: #000000;
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #000000;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: var(--dark-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #0a0606;
+	font-size: 1.2rem;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #030303;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #000000;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #000000;
+}
+
+.content button {
+	border: none;
+	background-color: #000000;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--dark-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+	border-top: 1px solid #d2b495;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}

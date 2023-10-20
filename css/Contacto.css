@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body {
+    height: 100vh;
+    background-size: cover;
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/6624093/pexels-photo-6624093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+header {
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5 ease;
+}
+header .brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation {
+    position: relative;
+}
+header .navigation .navigation-items a {
+    position: relative;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    width: 0;
+    height: 1%; /* Corregir el valor 'px' aquí */
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    height: 2px;
+}
+
+/*fomr*/
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center ;
+}
+/* Contenedor formulario de contacto */
+section .contactForm {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 3%;
+    gap: 10px;
+    width: 70%;
+    height: 80%;
+    background-color: #ffffffe2;
+    box-shadow: 1px 4px 20px -5px rgba(11, 11, 11, 0.624);
+    border-radius: 30px;
+}
+
+/* Formulario */
+section .contactForm .form {
+    width: 100%;
+    max-width: 100vh; /* Ajustar al ancho máximo */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Cambiar a column para apilar elementos verticalmente */
+}
+section .contactForm .form form{
+    width: 100%;
+}
+section .contactForm h2 {
+    color: #000000;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+section .contactForm .form p {
+    color: #000000;
+    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+section .contactForm .form form .inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+section .contactForm .form form .inputBox label {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Para input[type="text"] */
+section .contactForm .form form .inputBox input[type="text"] {
+    border: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    color: #000000;
+    resize: none;
+}
+
+/* Para input[type="email"] */
+section .contactForm .form form .inputBox input[type="email"] {
+    border: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    color: #000000;
+    resize: none;
+}
+
+/* Para textarea */
+section .contactForm .form form .inputBox textarea {
+    border: none;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    color: #000000;
+    resize: none;
+}
+
+/* Para los elementos cuando están enfocados (:focus) */
+section .contactForm .form form .inputBox input[type="text"]:focus,
+section .contactForm .form form .inputBox input[type="email"]:focus,
+section .contactForm .form form .inputBox textarea:focus {
+    outline: 2px solid #1788a3;
+}
+section .contactForm .form form input[type="submit"]{
+    background: #1766a3;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 9px 20px -5px rgba(0,0,0,0.59);
+    transition: 0.3s;
+}
+section .contactForm .form form input[type="submit"]:hover {
+    background-color: #0b426b;   
+}
+section .contactForm .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section .contactForm .info .imBox {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+section .contactForm .info .imBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .contactForm .info .textBox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+section .contactForm .info .textBox .infoContact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+section .contactForm .info .textBox .infoContact i {
+    font-size: 2em;
+    margin-right: 10px;
+    color: #0b426b;
+}
+section .contactForm .info .textBox .infoContact p {
+    color: #0b426b;
+}
+section .contactForm .info .rrss a {
+    padding: 20px;
+    font-size: 2em;
+    color: #1766a3;
+    transition: 0.3s;
+}
+section .contactForm .info .rrss a:hover {
+    color: #0b426c;
+}
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.footer {
+	background-color:#fff;
+    border: #000000;
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #000000;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: var(--dark-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #0a0606;
+	font-size: 1.2rem;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #030303;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #000000;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #000000;
+}
+
+.content button {
+	border: none;
+	background-color: #000000;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--dark-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+	border-top: 1px solid #d2b495;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+@media only screen and (max-width: 1200px){
+    section .contactForm {
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    }
+    section .contactForm {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 768px){
+    section .contactForm .info {
+        height: 300;
+        padding: 20px;
+    }
+    section .contactForm .info .imgBox {
+        display: none;
+
+    }
+    section .contactForm {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1040px){ 
+    body {
+        overflow-x: hidden;
+    }
+    
+    header {
+        
+        padding: 12px 20px;
+    }
+    section {
+        padding: 100px 20px;
+    }
+    .home .media-icons {
+        right: 15px;
+        
+    }
+    header .navigation {
+       display: none;
+       
+    }
+    
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 36rem;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1,1,1.0.5);
+    }
+
+    header .navigation .navigation-items a {
+        color: #000000;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    header .navigation .navigation-items a:before {
+        background: #000000;
+        height: 5px;
+    }
+    header .navigation.active .navigation-items {
+        background: #ffffff;
+        width: 300px;
+        max-width: 300px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: -0%;
+        box-shadow: 0 2px 1px rgba(255, 255, 255, 0.2);
+    }
+    .menu-btn {
+        background: url(../img/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../img/x.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0,3s ease;
+    }
+    section .contactForm {
+        width: 60%;
+    }
+    .container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 2rem 1rem;
+	}
+
+	.card-feature {
+		padding: 1rem;
+	}
+    .heading-1 {
+        
+		font-size: 2.4rem;
+	}
+    
+    .btn-read-more{
+		font-size: 1.8rem;
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul{
+		display: none;
+	}
+
+	.contact-info {
+		align-items: center;
+	}
+
+	.menu-footer{
+		grid-template-columns: 1fr;
+	}
+
+	.content p{
+		font-size: 1.6rem;
+	}
+}
