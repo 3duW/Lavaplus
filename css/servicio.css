@@ -124,13 +124,17 @@ th, td {
     flex-basis: 50%;
     text-align: center;
 }
+
+.header-img img {
+    border-radius: 50px;
+}
 .header-txt {
     flex-basis: 50%;
     text-align: center;
 }
 
 .header-txt h1 {
-    font-size: 90px;
+    font-size: 70px;
     text-transform: uppercase;
     line-height: 1;
     color: #111111;
@@ -285,6 +289,7 @@ th, td {
 
 .blog-1 img {
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .blog-1 h3 {
