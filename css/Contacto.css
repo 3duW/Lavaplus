@@ -70,7 +70,6 @@ section{
 }
 /* Contenedor formulario de contacto */
 section .contactForm {
-    border: thin red solid;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -413,27 +412,6 @@ section .contactForm .info .rrss a:hover {
 .copyright p {
 	font-weight: 400;
 	font-size: 1.6rem;
-}
-@media only screen and (max-width: 1200px){
-    section .contactForm {
-        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
-    }
-    section .contactForm {
-        width: 50%;
-    }
-}
-@media only screen and (max-width: 768px){
-    section .contactForm .info {
-        height: 300;
-        padding: 20px;
-    }
-    section .contactForm .info .imgBox {
-        display: none;
-
-    }
-    section .contactForm {
-        width: 70%;
-    }
 }
 @media only screen and (max-width: 1040px){ 
     body {

@@ -13,7 +13,7 @@ db.getCollection("clientes").insertOne(
 // Colección de Pedidos
 db.getCollection("Pedidos").insertOne(
     {
-        "cliente_id": ("Cliente_1"),
+        "cliente_id": "Cliente_1",
         "fecha_pedido": ISODate("2023-10-22T08:00:00Z"),
         "tipo_servicio": "Lavado en seco",
         "estado": "En proceso",
@@ -35,10 +35,11 @@ db.getCollection("Inventario").insertOne(
 // Colección de Facturación y Pagos
 db.getCollection("Facturación_Pagos").insertOne(
     {
-        "cliente_id": "cliente_1",
-        "fecha_pedido": "2023-10-20",
-        "tipo_servicio": "Lavado en seco",
-        "estado_pedido": "Entregado"
+        "cliente_id": "Cliente_1",
+        "numero_factura": "F2023001",
+        "fecha_pago": ISODate("2023-10-23T15:30:00Z"),
+        "monto": 50.00,
+        "metodo_pago": "Tarjeta de crédito"
     }
 )
 // Colección de Rutas de Reparto
@@ -59,16 +60,16 @@ db.getCollection("Proveedores_de_Suministros").insertOne(
     {
         "nombre_proveedor": "Proveedor A",
         "suministros": [
-          {
-            "nombre": "Detergente",
-            "cantidad_disponible": 500,
-            "unidad_medida": "litros"
-          },
-          {
-            "nombre": "Clorox",
-            "cantidad_disponible": 1000,
-            "unidad_medida": "litros"
-          }
+            {
+                "nombre": "Detergente",
+                "cantidad_disponible": 500,
+                "unidad_medida": "litros"
+            },
+            {
+                "nombre": "Clorox",
+                "cantidad_disponible": 1000,
+                "unidad_medida": "litros"
+            }
         ]
     }
 )
