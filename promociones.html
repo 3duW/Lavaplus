@@ -1,136 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="../img/washer-solid-24.png" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/promociones.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <title>Promociones</title>
-        <script defer src="../js/nosotros.js"></script>
-        <link rel="stylesheet" href="./css/promociones.css">
-
-    </head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones</title>
+    <link rel="stylesheet" href="./css/servicio.css">
+</head>
 <body>
-    <header>
-        <a href="../html/inicio.html" class="brand">LavaPlus</a>
-        <div class="menu-btn"></div>
-        <div class="navigation">
-            <div class="navigation-items">
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="servicio.html">Servicio</a>
-                <a href="Delivery.html">Delivery</a>
-                <a href="promociones.html">Promocion</a>
-                <a href="Contacto.html">Contacto</a>
-                <a href="login.html"><i class='bx bxs-user'></i></a>
+    
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">LAVAPLUS</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicio.html">Servicios</a></li>
+                    <li><a href="Delivery.html">Delivery</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header
-    <div class="clearfix">    </div>
 
-    <div class="promociones">
-        <div class="promocion">
-            <img src="./img/promocion-3.png" alt="Promoción 1">
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="./img/promocion-1.png" alt="">
+            </div>
+            <div class="header-txt">
+                <h1>Hasta 50% descuento</h1>
+                <p>¡No te pierdas esta oferta irresistible!</p>
+                <a href="#" class="btn-1">Saber mas</a>
+            </div>
         </div>
-        <div class="promocion">
-            <img src="./img/promocion-2.png" alt="Promoción 2">
+
+    </header>
+    <section class="oferton" id="oferton">
+        <div class="caja" id="caja">
+            <center><h1>"Limpieza impecable, comodidad total."</h1></center>
+            <center><img  src="./img/promocion-3.png" alt="lavadora con ropa"></center>
+            <center> <h1>El secreto de la frescura está en nuestras manos.</h1></center>
         </div>
-        <div class="promocion">
-            <img src="./img/promocion-1.png" alt="Promoción 3">
+        
+    </section>
+    <section class="oferton" id="oferton">
+        <div class="caja" id="caja">
+            <center><h1>""Calidad y confianza en cada lavado.""</h1></center>
+            <center><img  src="./img/promocion-2.png" alt="lavadora con ropa"></center>
+            <center> <h1>Tu ropa merece lo mejor, y nosotros lo ofrecemos.</h1></center>
         </div>
-    </div>
-    
+        
+    </section>   
 
+    <section class="blog container">
 
-
-
-
-
-    <div class="clearfix">    </div>
-
-    <div class="promociones content">
-        <!-- Contenido de la página -->
-    </div>
-
+        <div class="blog-1">
+            <img src="./img/promocion7.png" alt="">
+            <h3>Blog 1</h3>
+            <p>
+                Nuestros servicios se diferencian de la competencia
+                por brindar un trabajo de calidad, mejor precio y entregar 
+                sus prendas en la fecha indicada.
+            </p>
+        </div>
+        <div class="blog-1">
+            <img src="./img/promocion6.png" alt="">
+            <h3>Blog 2</h3>
+            <p>
+                Calidad y puntualidad son nuestros estandartes. 
+                Nuestro personal y proceso de entrega se destacan 
+                por encima de la competencia. 
+            </p>
+        </div>
+        <div class="blog-1">
+            <img src="./img/promocion8.png" alt="">
+            <h3>Blog 3</h3>
+            <p>
+                Nuestra flota de vehículos modernos y adaptados asegura que tu ropa 
+                viaje con total seguridad. Ponemos tu comodidad en primer lugar.
+            </p>
+        </div>
+    </section>
 
     <footer class="footer">
-        <div class="container container-footer">
-            <div class="menu-footer">
-                <div class="contact-info">
-                    <p class="title-footer">Información de Contacto</p>
-                    <ul>
-                        <li>
-                            Dirección:Proximamente
-                        </li>
-                        <li>Teléfono: +51 3242242</li>
-                        <li>EmaiL:Lavadoplus_@gmail.com</li>
-                    </ul>
-                    <div class="social-icons">
-                        <span class="facebook">
-                            <i class='bx bxl-facebook'></i>
-                        </span>
-                        <span class="twitter">
-                            <i class='bx bxl-twitter' ></i>
-                        </span>
-                        <span class="youtube">
-                            <i class='bx bxl-youtube'></i>
-                        </span>
-                        <span class="pinterest">
-                            <i class='bx bxl-pinterest-alt'></i>
-                        </span>
-                        <span class="instagram">
-                            <i class='bx bxl-instagram'></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="information">
-                    <p class="title-footer">Información</p>
-                    <ul>
-                        <li><a href="../html/nosotros.html">Acerca de Nosotros</a></li>
-                        <li><a href="../html/nosotros.html">Información Delivery</a></li>
-                        <li><a href="#">Politicas de Privacidad</a></li>
-                        <li><a href="#">Términos y condiciones</a></li>
-                        <li><a href="../html/Contacto.html">Contactános</a></li>
-                    </ul>
-                </div>
-
-                <div class="my-account">
-                    <p class="title-footer">Mi cuenta</p>
-
-                    <ul>
-                        <li><a href="#">Mi cuenta</a></li>
-                        <li><a href="#">Historial de ordenes</a></li>
-                        <li><a href="#">Lista de deseos</a></li>
-                        <li><a href="#">Promociones</a></li>
-                        <li><a href="#">Reembolsos</a></li>
-                    </ul>
-                </div>
-
-                <div class="newsletter">
-                    <p class="title-footer">promociones</p>
-
-                    <div class="content">
-                        <p>
-                            Suscríbete a Nuestro Consejos Plus para
-                            recibir informacion valiosa.
-                        </p>
-                        <input type="email" placeholder="Ingresa el correo aquí...">
-                        <button>Suscríbete</button>
-                    </div>
-                </div>
+        <div class="footer-content container">
+            <div class="link">
+                <h3>SOBRE NOSOTROS</h3>
+                <ul>
+                    <li><a href="#">Terminos y condiciones</a></li>
+                    <li><a href="#">Politicas de uso</a></li>
+                    <li><a href="#">Acerca de LAVAPLUS</a></li>
+                    <li><a href="#">Desarrollado por Estudiantes del Instito CERTUS&copy; 2023</a></li>
+                    
+                </ul>
             </div>
-
-            <div class="copyright">
-                <p>Desarrollado por Estudiantes del Instito CERTUS&copy; 2023</p>
-
-                <p><i class='bx bxs-wallet-alt'></i>Pago</p>
-            </div>
+            
+            
+                
         </div>
+        
+        
     </footer>
+
+    <script defer src="./js/servicio.js"></script>
 </body>
 </html>
