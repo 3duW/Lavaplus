@@ -124,6 +124,10 @@ th, td {
     flex-basis: 50%;
     text-align: center;
 }
+
+.header-img img {
+    border-radius: 50px;
+}
 .header-txt {
     flex-basis: 50%;
     text-align: center;
@@ -285,6 +289,7 @@ th, td {
 
 .blog-1 img {
     margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .blog-1 h3 {
