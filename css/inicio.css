@@ -607,6 +607,7 @@ section {
   .text-container {
     flex: 2; /* Toma todo el espacio disponible */
     padding: 20px;
+    margin-bottom: 20px
   }
 .text-container h2 {
     color: #ffffff;
@@ -652,6 +653,9 @@ section {
 /* Estilos para el contenedor del video */
 .video-container {
     position: relative;
+    width: 60%; /* Ajusta el ancho del contenedor de video según tus necesidades */
+    margin-left: 10%; /* Mueve el contenedor de video hacia la derecha */
+    
 }
 
 /* Estilos para el video dentro del contenedor */
