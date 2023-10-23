@@ -37,7 +37,7 @@ db.getCollection("Facturación_Pagos").insertOne(
     {
         "cliente_id": "Cliente_1",
         "numero_factura": "F2023001",
-        "fecha_pago": ISODate("2023-10-23T15:30:00Z"),
+        "fecha_pago": ISODate("2023-10-23T15:30:00Z"),//isodate es para que llame al horario que tiene la computadora(para que trabaje en tiempo real)
         "monto": 50.00,
         "metodo_pago": "Tarjeta de crédito"
     }
