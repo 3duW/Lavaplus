@@ -10,6 +10,8 @@ body {
     background-size: cover;
     min-height: 100vh;
     background-image: url();
+	flex-direction: column;
+	display: flex;
 }
 header {
     backdrop-filter: blur(10px);
@@ -67,6 +69,9 @@ contenido
 .promociones {
     display: flex;
     justify-content: space-between;
+	height: 2082px;
+	flex: 1;
+	
 }
 
 .promocion {
@@ -74,7 +79,10 @@ contenido
     overflow: hidden;
     transition: transform 0.3s, opacity 0.3s;
 }
-
+.promociones {
+	height: 500px;
+    height: 50vh; /* Esto hará que ocupe el 50% de la altura de la ventana */
+}
 .promocion:hover {
     transform: scale(1.2);
     opacity: 1;
@@ -113,7 +121,12 @@ para separa espacion
     border: #000000;
     
 }
-
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #000000;
+}
 .container-footer {
 	background-color: #fff;
     padding: 3rem;
@@ -221,7 +234,9 @@ para separa espacion
 		#fcaf45
 	);
 }
-
+.content {
+    margin-bottom: 100px; /* Ajusta el valor según sea necesario */
+}
 .content p {
 	font-size: 1.4rem;
 	color: #030303;
