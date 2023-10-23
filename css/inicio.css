@@ -179,7 +179,6 @@ section {
     object-fit: cover;
 }
 .inicio .media-icons {
-    
     z-index: 888;
     position: absolute;
     right: 30px;
@@ -236,7 +235,6 @@ section {
     transition: 1s ease;
     transition-property: clip-path;
 }
-
 /*            MAIN CONTENT            */
 .main-content {
 	background-color: #fff;
@@ -651,19 +649,65 @@ section {
   }
   
   /* Estilos para video-container (Video en la columna derecha) */
+/* Estilos para el contenedor del video */
 .video-container {
-    padding: 23px;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
-  
-.video-container iframe {
-    max-width: 170%; /* Esto hará que el video se ajuste al ancho de su contenedor */
-    height: 520px; /* Esto mantendrá la relación de aspecto original del video */
-    width: 404%; /* Puedes ajustar el ancho del video según tus necesidades */
-    max-height: 706px; /* Puedes ajustar la altura máxima del video según tus necesidades */
+
+/* Estilos para el video dentro del contenedor */
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para los controles personalizados */
+.custom-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0; /* Inicialmente ocultar los controles */
+    transition: opacity 0.3s; /* Agregar transición de opacidad */
+}
+
+.custom-controls:hover {
+    opacity: 1; /* Mostrar los controles al pasar el mouse por encima */
+}
+
+.custom-controls button,
+.custom-controls input {
+    margin: 5px;
+    padding: 5px 10px;
     border: none;
- }
+    cursor: pointer;
+}
+
+.custom-controls button {
+    background-color: #0077FF;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.custom-controls button:hover {
+    background-color: #0055CC;
+}
+
+.custom-controls input[type="range"] {
+    width: 80px;
+}
+
+/* Cambiar el estilo del botón "Silencio" cuando el video está silenciado */
+.custom-controls button.muted {
+    background-color: #FF0000;
+}
+
 /* ********************************** */
 /*               FOOTER               */
 /* ********************************** */
