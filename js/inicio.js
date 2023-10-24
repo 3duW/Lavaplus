@@ -34,3 +34,35 @@ btns.forEach((btn, i) => {
 });
 
 
+
+
+//video controles//
+var video = document.getElementById("miVideo");
+var playPauseButton = document.getElementById("play-pause-button");
+var volumeControl = document.getElementById("volume-control");
+var muteButton = document.getElementById("mute-button");
+
+playPauseButton.addEventListener("click", function() {
+    if (video.paused) {
+        video.play();
+        playPauseButton.textContent = "Pausa";
+    } else {
+        video.pause();
+        playPauseButton.textContent = "Reproducir";
+    }
+});
+
+volumeControl.addEventListener("input", function() {
+    video.volume = volumeControl.value;
+});
+
+muteButton.addEventListener("click", function() {
+    video.muted = !video.muted;
+    if (video.muted) {
+        muteButton.textContent = "Desmutear";
+    } else {
+        muteButton.textContent = "Silencio";
+    }
+});
+
+
