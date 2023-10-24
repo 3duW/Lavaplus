@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="../img/washer-solid-24.png" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/Delivery.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <title>Delivery</title>
-        <script defer src="../js/login.js"></script>
-    </head>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/Delivery.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servicio de Delivery | LavaPlus</title>
+</head>
 <body>
     <header>
         <a href="../html/inicio.html" class="brand">LavaPlus</a>
@@ -24,10 +18,101 @@
                 <a href="Delivery.html">Delivery</a>
                 <a href="promociones.html">Promocion</a>
                 <a href="Contacto.html">Contacto</a>
-                <a href="login.html"><i class='bx bxs-user'></i></a>
+                <a href="login.html"><i class='bx bxs-user'></i>Login/Register</a>
             </div>
         </div>
     </header>
+    
+<section class="imagen">
+    <section class="hero-section">
+        <h1>Bienvenido a LavaPlus Delivery</h1>
+        <p>Ofrecemos servicios de entrega rápidos y seguros para satisfacer todas tus necesidades de lavandería.</p>
+    </section>
+
+    <section class="delivery-options">
+        <div class="option">
+            <p>1). PIDE TU DELIVERY LLENANDO EL FORMULARIO QUE ESTÁ MAS ABAJO</p>
+        </div>
+        <div class="option1">
+            <p>2). NOS COMUNICAMOS CONTIGO PARA RECOGER TUS PRENDAS</p>
+        </div>
+        <div class="option2">
+            <p>3). RECOGEMOS TUS PRENDAS EN TU DOMICILIO</p>
+        </div>
+        <div class="option3">
+            <p>4). CONSOLIDAMOS TU PEDIDO Y RECIBES TU COMPROBANTE DE PAGO</p>
+        </div>
+        <div class="option4">
+            <p>5). VERIFICAMOS TU PAGO Y TRATAMOS TUS PRENDAS</p>
+        </div>
+        <div class="option5">
+            <p>6). COORDINAMOS LA ENTREGA DE TU PEDIDO </p>
+        </div>
+    </section>
+</section>
+    <section class="delivery-form">
+        <div class="form-container">
+            <div class="form">
+
+                <form id="deliveryForm">
+                                    <h2>registra tu pedido aqui</h2>
+                <br>
+                    <input type="text" id="nombre" placeholder="Nombre completo" required><br>
+                    <input type="tel" id="telefono" placeholder="Teléfono" pattern="[0-9]{9}" required><br>
+                    <input type="email" id="correo" placeholder="Correo electrónico" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required><br>
+                    
+                    <label for="distrito">Distrito:</label>
+                    <select id="distrito" required>
+                        <option value="distrito1">San juan de lurugancho</option>
+                        <option value="distrito2">Cercado de lima</option>
+                        <option value="distrito3">Agustino</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select><br>
+                    
+                    <label for="lavado">Tipo de lavado:</label>
+                    <select id="lavado" required>
+                        <option value="lavadoEnSeco">Lavado en seco</option>
+                        <option value="lavadoNormal">Lavado normal</option>
+                        <option value="lavadoDelicado">Lavado delicado</option>
+                        <option value="lavadoExpress">Lavado express</option>
+                        <option value="lavadoEcológico">Lavado ecológico</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select><br>
+                    
+                    <label for="prendas">Tipo de prenda:</label>
+                    <select id="prendas" required>
+                        <option value="prendasjeans">prendas jeans</option>
+                        <option value="camisas">camisas</option>
+                        <option value="ropaDeCama">Ropa de cama</option>
+                        <option value="trajes">Trajes</option>
+                        <option value="vestidos">Vestidos</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select><br>
+                    
+                    <label for="horaRecojo">Hora de recojo:</label>
+                    <input type="time" id="horaRecojo" required><br>
+                    
+                    <label for="horaEntrega">Hora de entrega:</label>
+                    <input type="time" id="horaEntrega" required><br>
+                    
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" placeholder="Calle, número, etc." required><br>
+                    
+                    <label for="instrucciones">Instrucciones Específicas:</label>
+                    <textarea id="instrucciones" rows="4" cols="50" placeholder="Indique instrucciones específicas sobre el lavado o cuidado de ciertas prendas"></textarea><br>
+                    
+                    <label><input type="checkbox" required> Acepto los términos y condiciones</label><br>
+                    
+                    <button type="submit" id="enviarBtn">Enviar solicitud</button>
+                </form>
+                
+            </div>
+        
+        </div>
+    </section>
+    
+
+<!-- ... (código posterior) ... -->
     <footer class="footer">
         <div class="container container-footer">
             <div class="menu-footer">
@@ -102,6 +187,6 @@
                 <p><i class='bx bxs-wallet-alt'></i>Pago</p>
             </div>
         </div>
-    </footer>
+    </footer> 
 </body>
 </html>
