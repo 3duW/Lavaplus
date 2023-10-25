@@ -181,10 +181,7 @@ th, td {
 section div img {
     width: 50rem;
 }
-.oscuro {
-    background-color: #474646;
-    color: white;
-}
+
 .oferta50 {
     color: red;
     font-size: 5rem;
