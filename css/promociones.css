@@ -32,6 +32,7 @@ img {
 }
 
 .header {
+    
     display: flex;
     align-items: center;
     min-height: 80vh;
@@ -74,6 +75,7 @@ img {
     margin-bottom: 20px;
 }
 .menu {
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -134,6 +136,7 @@ img {
 }
 
 table {
+    
     width: 100%;
 }
 
@@ -161,6 +164,7 @@ th, td {
 }
 
 .ofert {
+    border: thin RED solid;
     padding: 20px 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -251,15 +255,17 @@ section div img {
 .container-footer {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
-	padding: 3rem;
+	gap: 1rem;
+	padding: 2rem;
 }
 
 .menu-footer {
-	display: grid;
+	display: flex;
 	grid-template-columns: repeat(3, 1fr) 30rem;
-	gap: 3rem;
-	justify-items: center;
+	gap: 8rem;
+    padding: 40px 0;
+    text-align: center;
+    justify-content: center;
 }
 
 .title-footer {
