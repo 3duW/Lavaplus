@@ -178,6 +178,14 @@ th, td {
     margin-right: 15px;
 }
 
+section div img {
+    width: 50rem;
+}
+
+.oferta50 {
+    color: red;
+    font-size: 5rem;
+}
 .ofert-img img {
     width: 250px;
 }
