@@ -1,18 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat',sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 body {
     align-items: center;
+    font-family: 'Montserrat',sans-serif;
     justify-content: center;
     height: 100vh;
     background-size: cover;
     min-height: 100vh;
     background-image: url(https://images.pexels.com/photos/6624093/pexels-photo-6624093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo del encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 7vh;
+    background-color: #F5F5F5;
+    padding: 2px;
+}
+
+/* Estilo del menú */
+.menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: 25px;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Estilo de la barra de navegación */
+.menu .navbar ul {
+    display: flex;
+}
+
+.menu .navbar ul li {
+    position: relative;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #111111;
+    display: block;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Estilo del ícono del menú */
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo del submenú */
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4B5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    color: #FFFFFF;
+}
+
+
 header {
     backdrop-filter: blur(10px);
     z-index: 999;
@@ -26,45 +143,13 @@ header {
     padding: 15px 200px;
     transition: 0.5 ease;
 }
-header .brand {
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-header .navigation {
-    position: relative;
-}
-header .navigation .navigation-items a {
-    position: relative;
-    color: #ffffff;
-    font-size: 1em;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 30px;
-    transition: 0.3s ease;
-}
-header .navigation .navigation-items a:before {
-    content: '';
-    position: absolute;
-    background: #ffffff;
-    width: 0;
-    height: 1%; /* Corregir el valor 'px' aquí */
-    bottom: 0;
-    left: 0;
-    transition: 0.3s ease;
-}
-header .navigation .navigation-items a:hover:before {
-    width: 100%;
-    height: 2px;
-}
+
 /*Todo el diseño de Nosotros*/
 .about-us {
     position: relative; /* Establecer posición relativa para que los pseudo-elementos sean relativos a este elemento */
     padding: 23px 0; /* Espaciado interno superior e inferior */
     text-align: center;
-    margin: 19px 0; /* Margen superior e inferior */
+    margin: 1px 0; /* Margen superior e inferior */
 }
 
 /* Pseudo-elemento ::before para el fondo oscuro */
