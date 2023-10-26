@@ -589,14 +589,10 @@ th, td {
         margin-bottom: 30px;
     }
 
-    .footer {
-        padding: 30px;
-    }
+    .menu-footer{
+		grid-template-columns: 1fr;
+	}
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
 }
 
 
