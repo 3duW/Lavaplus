@@ -21,12 +21,9 @@ img {
     max-width: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .header {
+    
     display: flex;
     align-items: center;
     min-height: 80vh;
@@ -35,6 +32,8 @@ img {
 }
 
 .menu {
+    max-width: 1200px;
+    margin: 0 auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -64,6 +63,7 @@ img {
 }
 
 #menu {
+    
     display: none;
 }
 
@@ -103,6 +103,7 @@ th, td {
 }
 
 .borrar {
+    
     background-color: #111111;
     border-radius: 50%;
     padding: 5px 10px;
@@ -113,6 +114,7 @@ th, td {
 }
 
 .header-content {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,6 +159,8 @@ th, td {
 }
 
 .ofert {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -202,6 +206,8 @@ th, td {
 }
 
 .products {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 50px 0;
     text-align: center;
 }
@@ -247,10 +253,13 @@ th, td {
 }
 
 .precio {
+    
     font-weight: 800;
 }
 
 .icons {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 50px 0 100px 0;
     display: flex;
     justify-content: space-between;
@@ -580,14 +589,10 @@ th, td {
         margin-bottom: 30px;
     }
 
-    .footer {
-        padding: 30px;
-    }
+    .menu-footer{
+		grid-template-columns: 1fr;
+	}
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
 }
 
 
