@@ -1,6 +1,6 @@
 use("LavaGroup");
 
-// Colección de Clientes
+// Clientes
 db.getCollection("clientes").insertOne(
     {
         "nombre": "Cliente_1",
@@ -10,7 +10,7 @@ db.getCollection("clientes").insertOne(
     }
 )
 
-// Colección de Pedidos
+// Pedidos
 db.getCollection("Pedidos").insertOne(
     {
         "cliente_id": "Cliente_1",
@@ -23,7 +23,7 @@ db.getCollection("Pedidos").insertOne(
         ]
     }
 )
-// Colección de Inventario
+//Inventario
 db.getCollection("Inventario").insertOne(
     {
         "nombre": "Detergente para ropa",
@@ -32,7 +32,7 @@ db.getCollection("Inventario").insertOne(
         "precio_unitario": 5.99
     }
 )
-// Colección de Facturación y Pagos
+//Facturación y Pagos
 db.getCollection("Facturación_Pagos").insertOne(
     {
         "cliente_id": "Cliente_1",
@@ -42,7 +42,7 @@ db.getCollection("Facturación_Pagos").insertOne(
         "metodo_pago": "Tarjeta de crédito"
     }
 )
-// Colección de Rutas de Reparto
+//Rutas de Reparto
 db.getCollection("Rutas_de_Reparto").insertOne(
     {
         "nombre_ruta": "Ruta 1",
@@ -55,7 +55,7 @@ db.getCollection("Rutas_de_Reparto").insertOne(
         ]
     }
 )
-// Colección de Proveedores de Suministros
+//Proveedores de Suministros
 db.getCollection("Proveedores_de_Suministros").insertOne(
     {
         "nombre_proveedor": "Proveedor A",
@@ -73,7 +73,7 @@ db.getCollection("Proveedores_de_Suministros").insertOne(
         ]
     }
 )
-// Colección de Promociones y Descuentos
+//Promociones y Descuentos
 db.getCollection("Promociones_Descuentos").insertOne(
     {
         "nombre_promocion": "Oferta de Temporada",
@@ -82,14 +82,14 @@ db.getCollection("Promociones_Descuentos").insertOne(
         "fecha_fin": "2023-11-30"
     }
 )
-// Colección de Notificaciones y Alertas
+//Notificaciones y Alertas
 db.getCollection("Notificaciones_Alertas").insertOne(
     {
         "cliente_id": "1",
         "tipo_alerta": "Recordatorio de Entrega",
         "mensaje": "Su pedido se entregará mañana a las 10 AM."
     }
-)// Colección de Registros de Limpieza
+)//Registros de Limpieza
 db.getCollection("Registros_Limpieza").insertOne(
     {
         "prenda": "Camisa",
@@ -98,7 +98,7 @@ db.getCollection("Registros_Limpieza").insertOne(
         "detergente_utilizado": "Detergente A"
     }
 )
-// Colección de Horarios de Trabajo
+//Horarios de Trabajo
 db.getCollection("Horarios_Trabajo").insertOne(
     {
         "empleado_id": "empleado_1",
@@ -106,7 +106,7 @@ db.getCollection("Horarios_Trabajo").insertOne(
         "horario": "9:00 AM - 5:00 PM"
     }
 )
-// Colección de Programación de Recogida y Entrega
+//Programación de Recogida y Entrega
 db.getCollection("Programación_Recogida_Entrega").insertOne(
     {
         "cliente_id": "cliente_1",
@@ -116,7 +116,7 @@ db.getCollection("Programación_Recogida_Entrega").insertOne(
         "hora_entrega": "10:00"
     }
 )
-// Colección de comentarios y reseñas
+//comentarios y reseñas
 db.getCollection("comentarios_reseñas").insertOne(
     {
         "cliente_id": 2,
@@ -125,7 +125,7 @@ db.getCollection("comentarios_reseñas").insertOne(
         "comentario": "El servicio fue rápido y eficiente, ¡gracias!"
     }
 )
-// Colección de Maquinas y equipos
+//Maquinas y equipos
 db.getCollection("Maquinas_equipos").insertOne(
     {
         "nombre_equipo": "Lavadora Industrial",
@@ -133,7 +133,7 @@ db.getCollection("Maquinas_equipos").insertOne(
         "ultimo_mantenimiento": "2023-10-15"
     }
 )
-// Colección de Historial de pedidos del cliente
+//Historial de pedidos del cliente
 db.getCollection("Historial_cliente").insertOne(
     {
         "cliente_id": "cliente_1",
