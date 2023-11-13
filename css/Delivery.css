@@ -34,20 +34,21 @@ header {
     min-height: 7vh;
 }
 header .brand {
-    color: #ffffff;
+    color: #070707;
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
+    
 }
 header .navigation {
     position: relative;
 }
 header .navigation .navigation-items a {
     position: relative;
-    color: #ffffff;
+    color: #030303;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     margin-left: 30px;
     transition: 0.3s ease;
