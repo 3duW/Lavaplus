@@ -2,25 +2,28 @@ const carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+const irAPagarBtn = document.getElementById('ir-a-pagar');
 
 cargarEventListeners();
 
 function cargarEventListeners() {
-
     elementos1.addEventListener('click', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    // Agrega un evento de clic al botón "Ir a pagar"
+    irAPagarBtn.addEventListener('click', irAPagar);
 }
 
 function comprarElemento(e) {
     e.preventDefault();
-    if(e.target.classList.contains('agregar-carrito')){
+    if (e.target.classList.contains('agregar-carrito')) {
         const elemento = e.target.parentElement.parentElement;
         leerDatosElemento(elemento);
+        actualizarBotonPagar();
     }
 }
 
-function leerDatosElemento(elemento){
+function leerDatosElemento(elemento) {
     const infoElemento = {
         imagen: elemento.querySelector('img').src,
         titulo: elemento.querySelector('h3').textContent,
@@ -30,41 +33,51 @@ function leerDatosElemento(elemento){
     insertarCarrito(infoElemento);
 }
 
-function insertarCarrito(elemento){
-
+function insertarCarrito(elemento) {
     const row = document.createElement('tr');
     row.innerHTML = `
-    <td>
-        <img src="${elemento.imagen}" width=100 />
-    </td>
-    <td>
-        ${elemento.titulo}
-    </td>
-    <td>
-        ${elemento.precio}
-    </td>
-    <td>
-        <a herf="#" class="borrar" data-id="${elemento.id}">X </a>
-    </td>
+        <td>
+            <img src="${elemento.imagen}" width=100 />
+        </td>
+        <td>
+            ${elemento.titulo}
+        </td>
+        <td>
+            ${elemento.precio}
+        </td>
+        <td>
+            <a href="#" class="borrar" data-id="${elemento.id}">X</a>
+        </td>
     `;
 
     lista.appendChild(row);
- }
+}
 
- function eliminarElemento(e) {
+function eliminarElemento(e) {
     e.preventDefault();
-    let elemento,
-        elementoId;
-    if(e.target.classList.contains('borrar')) {
+    let elemento, elementoId;
+    if (e.target.classList.contains('borrar')) {
         e.target.parentElement.parentElement.remove();
         elemento = e.target.parentElement.parentElement;
         elementoId = elemento.querySelector('a').getAttribute('data-id');
     }
- }
+    actualizarBotonPagar();
+}
 
- function vaciarCarrito() {
-    while(lista.firstChild) {
+function vaciarCarrito() {
+    while (lista.firstChild) {
         lista.removeChild(lista.firstChild);
     }
+    actualizarBotonPagar();
     return false;
- }
+}
+
+function actualizarBotonPagar() {
+    irAPagarBtn.style.display = lista.firstChild ? 'block' : 'none';
+}
+
+// Función para redirigir a la página de pago.html
+function irAPagar() {
+    console.log('Ir a pagar');
+    window.location.href = 'pago.html';
+}

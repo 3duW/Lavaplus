@@ -1,15 +1,16 @@
 const url_api = "http://localhost:9000/api/cont"
 
-function listar() {
-    axios.get(url_api)
-    .then(function(response){
-        console.log(response.data);
-    })
-    .catch(function (error) {
-        console.error(error);
-    })
+function validar() {
+    if (!nombre.value || !correo.value || !telefono.value || !dni.value || !direccion.value || !asunto.value) {
+        alert('Por favor complete todos los campos.');
+        return false;
+    }
+    return true;
 }
+
 function guardar() {
+    if (!validar()) return;
+
     const data = {
         name: nombre.value,
         correo: correo.value,
@@ -22,9 +23,11 @@ function guardar() {
     axios.post(url_api, data)
         .then(function (response) {
             console.log(response.data);
+            alert('Mensaje Enviado.');
         })
         .catch(function (error) {
             console.error(error);
+            alert('Error al guardar el Mensaje.');
         });
 }
 

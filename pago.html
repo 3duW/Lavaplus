@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/washer-solid-24.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pago.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Pago</title>
+</head>
+<body>
+  <header>
+    <a href="../html/inicio.html" class="brand">LavaPlus</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicio.html">Servicio</a>
+            <a href="Delivery.html">Delivery</a>
+            <a href="promociones.html">Promocion</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="login.html"><i class='bx bxs-user'></i></a>
+        </div>
+    </div>
+</header>
+<form action="" id="facturaForm">
+  <h2>Formulario de Pago</h2>
+  <label for="cliente">Nombre:</label>
+  <input type="text" id="nombre" name="cliente" required>
+  
+  <label for="lavado">Tipo de lavado:</label>
+  <select id="lavado" required onchange="actualizarMonto()">
+      <option value="lavado de Edredon">Lavado de Edredon</option>
+      <option value="lavado frazadas">Lavado de Frazadas</option>
+      <option value="lavado alfombras">Lavado de alfombras</option>
+      <option value="lavado ternos">Lavado de cama de mascotas</option>                    
+      <option value="lavado ropa de bebes">Lavado de ropa de bebes</option>
+      <option value="lavado de casacas">Lavado de Casacas</option>                                                          
+  </select>
+  
+  <label for="num_factura">Número de Factura:</label>
+  <input type="text" id="num_factura" name="num_factura" readonly required>
+
+  <label for="monto">Monto:</label>
+  <input type="number" id="monto" name="monto" required>
+
+  <label for="metodo_pago">Método de Pago:</label>
+  <select id="metodo_pago" name="metodo_pago" required>
+      <option value="EFECTIVO" selected>Efectivo</option>
+      <option value="TARJETA">Tarjeta</option>
+      <option value="TRANSFERENCIA">Transferencia</option>
+  </select>
+
+  <label for="fecha_emision">Fecha de Emisión:</label>
+  <input type="date" id="fecha_emision" name="fecha_emision" " required>
+<button type="button" onclick="guardar()">Realizar el Pedido</button>
+</form>
+<script src="./js/Factura.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
