@@ -10,7 +10,8 @@ function listar() {
         const tbody = document.createElement("tbody");
 
         // Encabezados de la tabla
-        const encabezados = ["Nombre", "Teléfono", "Correo","dni", "distrito", "tipo_servicio", "tipo_prenda", "recojo","direccion", "comentario" ]; // Agrega más encabezados según tus datos
+        const encabezados = ["Nombre", "Teléfono", "Correo","dni", "distrito", 
+        "tipo_servicio",  "tipo_prenda", "recojo","direccion", "comentario" ];
 
         // Crear fila de encabezados
         const encabezadosRow = document.createElement("tr");
@@ -102,6 +103,7 @@ function guardar() {
 
     axios.post(url_api, data)
         .then(function (response) {
+            alert("¡El formulario fue enviado correctamente!");
             console.log(response.data);
         })
         .catch(function (error) {
