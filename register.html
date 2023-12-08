@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Login</title>
-    <script defer src="../js/login.js"></script>
+    
 </head>
 <body>
     <header>
@@ -55,7 +55,7 @@
                     <i class='bx bxl-linkedin-square'></i>
                 </div>
                 <p>o usa tu email para registrarte </p><br><br>
-                <formc class="form">
+                <form class="form">
                 <label>
                     <i class='bx bxs-user' ></i>
                     <input type="text" placeholder="Nombre Completos" id="nombre">
@@ -76,10 +76,12 @@
                     <i class='bx bx-lock'></i>
                     <input type="password" placeholder="Contrañesa" id="contraseña">
                 </label>
-                <button onclick="registrate()"><a href="./login.html">Registrate</a></button>
-              </formc>
+                <button onclick="guardar()"><a href="./login.html">Registrate</a></button>
+              </form>
             </div>
         </div>
     </div>
+    <script defer src="../js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
