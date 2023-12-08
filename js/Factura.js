@@ -4,6 +4,7 @@ function guardar() {
   const data = {
       cliente: nombre.value,
       num_factura: num_factura.value,
+      servicio : lavado.value,
       monto: monto.value,
       metodo_pago: metodo_pago.value,
       fecha_emision: fecha_emision.value
@@ -18,6 +19,7 @@ function guardar() {
             console.error(error);
             alert('Error al guardar el registro.');
         });
+    document.getElementById("facturaForm").reset();
 }
 function actualizarMonto() {
   var lavadoSeleccionado = document.getElementById("lavado").value;
