@@ -1,33 +1,31 @@
-const url_api = "http://localhost:9000/api/registros"
+const url_api = "http://localhost:9000/api/registros";
 
 function validar() {
-    if (!nombres.value || !telefono.value || !dni.value || !correo.value || !contarseña.value) {
+    if (!nombre.value ||  !telefono.value || !dni.value || !correo.value || !contrase.value) {
         alert('Por favor complete todos los campos.');
         return false;
     }
     return true;
 }
-
 function guardar() {
-    if (!validar()) return;
+        if (!validar()) return;
 
     const data = {
-        nombre: nombres.value,
+        nombre: nombre.value,
         telefono: telefono.value,
         dni: dni.value,
         correo: correo.value,
-        contraseña: contraseña.value
-        
+        contrase: contraseña.value
     };
 
     axios.post(url_api, data)
         .then(function (response) {
             console.log(response.data);
-            alert('Mensaje Enviado.');
+            alert('Se registro con Exito.');
         })
         .catch(function (error) {
             console.error(error);
-            alert('Error al guardar el Mensaje.');
+            alert('No se pudo registrar .');
         });
 }
 

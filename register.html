@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Login</title>
+    <title></title>
     
 </head>
 <body>
@@ -55,33 +55,33 @@
                     <i class='bx bxl-linkedin-square'></i>
                 </div>
                 <p>o usa tu email para registrarte </p><br><br>
-                <form class="form">
-                <label>
-                    <i class='bx bxs-user' ></i>
-                    <input type="text" placeholder="Nombre Completos" id="nombre">
-                </label>
-                <label>
-                    <i class='bx bxs-phone-call'></i>
-                    <input type="Number" placeholder="Telefono" id="telefono">
-                </label>
-                <label>
-                    <i class='bx bxs-user' ></i>
-                    <input type="Number" placeholder="DNI" id="dni">
-                </label>
-                <label>
-                    <i class='bx bx-envelope'></i>
-                    <input type="email" placeholder="Correo Electronico" id="correo">
-                </label>
-                <label>
-                    <i class='bx bx-lock'></i>
-                    <input type="password" placeholder="Contrañesa" id="contraseña">
-                </label>
-                <button onclick="guardar()"><a href="./login.html">Registrate</a></button>
-              </form>
+                <form action="" class="form">
+                    <label>
+                        <i class='bx bxs-user'></i>
+                        <input type="text" id="nombre" placeholder="Nombre">
+                    </label>
+                    <label>
+                        <i class='bx bxs-phone-call'></i>
+                        <input type="number" id="telefono" placeholder="Teléfono">
+                    </label>
+                    <label>
+                        <i class='bx bxs-user'></i>
+                        <input type="number" id="dni" placeholder="DNI">
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="correo" placeholder="Correo electrónico">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock'></i>
+                        <input type="password" id="contraseña" placeholder="Contraseña">
+                    </label>
+                    <button onclick="guardar()">Guardar</button>
+                </form>                
             </div>
         </div>
     </div>
-    <script defer src="../js/login.js"></script>
+    <script src="./js/register.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
