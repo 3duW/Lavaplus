@@ -12,7 +12,7 @@ function guardar() {
         nombre: nombre,
         telefono: parseInt(telefono),
         dni: parseInt(dni),
-        Correo: correo,
+        correo: correo,
         password: parseInt(dni),
        
     };
