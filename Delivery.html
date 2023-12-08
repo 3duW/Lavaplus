@@ -65,50 +65,43 @@
                     <input type="text" id="nombre" placeholder="Nombre completo" required><br>
                     <input type="tel" id="telefono" placeholder="Teléfono" pattern="[0-9]{9}" required><br>
                     <input type="email" id="correo" placeholder="Correo electrónico" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required><br>
-                    
+                    <input type="text" id="dni" placeholder="DNI" required><br>
                     <label for="distrito">Distrito:</label>
                     <select id="distrito" required>
-                        <option value="distrito1">San juan de lurugancho</option>
-                        <option value="distrito2">Cercado de lima</option>
-                        <option value="distrito3">Agustino</option>
-                        <!-- Agrega más opciones según sea necesario -->
+                        <option value="SJL">SJL</option>
+                        <option value="Cercado De Lima">Cercado de lima</option>
+                        <option value="Agustino">Agustino</option>
                     </select><br>
                     
                     <label for="lavado">Tipo de lavado:</label>
                     <select id="lavado" required>
-                        <option value="lavadoEnSeco">Lavado en seco</option>
-                        <option value="lavadoNormal">Lavado normal</option>
-                        <option value="lavadoDelicado">Lavado delicado</option>
-                        <option value="lavadoExpress">Lavado express</option>
-                        <option value="lavadoEcológico">Lavado ecológico</option>
-                        <!-- Agrega más opciones según sea necesario -->
+                        <option value="lavado En Seco">Lavado en seco</option>
+                        <option value="lavado Normal">Lavado normal</option>
+                        <option value="lavado Delicado">Lavado delicado</option>
+                        <option value="lavado Express">Lavado express</option>
+                        <option value="lavado Ecológico">Lavado ecológico</option>
+            
                     </select><br>
                     
                     <label for="prendas">Tipo de prenda:</label>
                     <select id="prendas" required>
-                        <option value="prendasjeans">prendas jeans</option>
-                        <option value="camisas">camisas</option>
-                        <option value="ropaDeCama">Ropa de cama</option>
-                        <option value="trajes">Trajes</option>
+                        <option value="prendas Jeans">Prendas Jeans</option>
+                        <option value="camisas">Camisas</option>
+                        <option value="Cubre Cama">Cubre cama</option>
+                        <option value="Trajes">Trajes</option>
                         <option value="vestidos">Vestidos</option>
-                        <!-- Agrega más opciones según sea necesario -->
+                       
                     </select><br>
                     
                     <label for="horaRecojo">Hora de recojo:</label>
                     <input type="time" id="horaRecojo" required><br>
-                    
-                    <label for="horaEntrega">Hora de entrega:</label>
-                    <input type="time" id="horaEntrega" required><br>
-                    
                     <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" placeholder="Calle, número, etc." required><br>
+                    <input type="text" id="direccion" placeholder="av, número, etc." required><br>
                     
                     <label for="instrucciones">Instrucciones Específicas:</label>
                     <textarea id="instrucciones" rows="4" cols="50" placeholder="Indique instrucciones específicas sobre el lavado o cuidado de ciertas prendas"></textarea><br>
-                    
-                    <label><input type="checkbox" required> Acepto los términos y condiciones</label><br>
-                    
-                    <button type="submit" id="enviarBtn">Enviar solicitud</button>
+                    <button type="button" onclick="guardar()">Enviar</button>
+                    <button type="button" onclick="listar()">Ver</button>
                 </form>
                 
             </div>
@@ -117,7 +110,7 @@
     </section>
     
 
-<!-- ... (código posterior) ... -->
+
     <footer class="footer">
         <div class="container container-footer">
             <div class="menu-footer">
@@ -193,5 +186,7 @@
             </div>
         </div>
     </footer> 
+    <script src="./js/delivery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
