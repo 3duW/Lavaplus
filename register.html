@@ -42,20 +42,32 @@
         <div class="information">
             <div class="info-childs">
                 <h2>Bienvenido</h2>
-                <p>Para Unirte a nuestra comunidad por favor Inicia Sesion con tus datos</p>
-                <button > <a href="./register.html">Registrarse</a></button>
+                <p>Para Unirte a nuestra comunidad por favor Registrate con tus datos</p>
+                <button > <a href="./login.html">Iniciar Sesion</a></button>
             </div>
         </div>
         <div class="form-information">
             <div class="form-information-childs">
-                 <h2>Inicia Sesion</h2>
+                 <h2>Crear Una Cuenta</h2>
                 <div class="icons">
                     <i class='bx bxl-google'></i>
                     <i class='bx bxl-github'></i>
                     <i class='bx bxl-linkedin-square'></i>
                 </div>
-                <p> </p><br><br>
+                <p>o usa tu email para registrarte </p><br><br>
                 <formc class="form">
+                <label>
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" placeholder="Nombre Completos" id="nombre">
+                </label>
+                <label>
+                    <i class='bx bxs-phone-call'></i>
+                    <input type="Number" placeholder="Telefono" id="telefono">
+                </label>
+                <label>
+                    <i class='bx bxs-user' ></i>
+                    <input type="Number" placeholder="DNI" id="dni">
+                </label>
                 <label>
                     <i class='bx bx-envelope'></i>
                     <input type="email" placeholder="Correo Electronico" id="correo">
@@ -64,7 +76,7 @@
                     <i class='bx bx-lock'></i>
                     <input type="password" placeholder="Contrañesa" id="contraseña">
                 </label>
-                <button onclick="iniSesion()"><a href="./index.html">Inicia Sesion</a></button>
+                <button onclick="registrate()"><a href="./login.html">Registrate</a></button>
               </formc>
             </div>
         </div>

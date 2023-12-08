@@ -10,7 +10,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>Contacto</title>
-        <script defer src="../js/login.js"></script>
     </head>
 <body>
     <header>
@@ -35,33 +34,35 @@
                      <h2>!Contactenos¡</h2>
                      <p>Somos una lavandería con más de 10 Años de Experiencia, dedicados al Servicio de Lavado de todo tipo de prendas de vestir y línea hotelera, encaminada a maximizar la rentabilidad a través de un excelente servicio y los mejores procesos, para que nuestros colaboradores y clientes siempre estén satisfechos, fortaleciendo así su bienestar y fidelidad.</p>
                </div>
-              <form action="">
+               <form action="">
                 <div class="inputBox">
-                    <label for="">Nombre</label>
-                    <input type="text" placeholder="Nombre...">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" placeholder="Nombre..." id="nombre">
                 </div>
                 <div class="inputBox">
-                    <label for="">Correo</label>
-                    <input type="email" placeholder="Ingrese Correo...">
+                    <label for="correo">Correo</label>
+                    <input type="text" placeholder="Ingrese Correo..." id="correo">
                 </div>
                 <div class="inputBox">
-                    <label for="">Telefono</label>
-                    <input type="tel" placeholder="Telefono...">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" placeholder="Telefono..." id="telefono">
                 </div>
                 <div class="inputBox">
-                    <label for="">DNI</label>
-                    <input type="tel" placeholder="DNI...">
+                    <label for="dni">DNI</label>
+                    <input type="text" placeholder="DNI..." id="dni">
                 </div>
                 <div class="inputBox">
-                    <label for="">Direccion</label>
-                    <input type="Dir" placeholder="Direccion...">
+                    <label for="direccion">Direccion</label>
+                    <input type="text" placeholder="Direccion..." id="direccion">
                 </div>
                 <div class="inputBox">
-                    <label for="">Mensaje</label>
-                    <input type="Men" placeholder="Mensaje...">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" placeholder="Asunto..." id="asunto">
                 </div>
-                <input type="submit" value="Enviar Mensaje">
-              </form>
+                <button type="button" onclick="guardar()">Enviar</button>
+                <button type="button" onclick="listar()">ver</button>
+            </form>
+            
             </div>
             <div class="info">
                 <div class="imgBox">
@@ -69,7 +70,7 @@
                 </div>
                 <div class="textBox">
                     <div class="infoContact">
-                        <i class='bx bx-map-alt'></i><p>Proximamente</p>
+                        <i class='bx bx-map-alt'>< /i><p>Proximamente</p>
                     </div>
                     <div class="infoContact">
                         <i class='bx bxs-phone'></i></i><p>Telefono: +51 234242</p>
@@ -150,7 +151,7 @@
                             Suscríbete a Nuestro Consejos Plus para
                             recibir informacion valiosa.
                         </p>
-                        <input type="email" placeholder="Ingresa el correo aquí...">
+                        <input type="text" placeholder="Ingresa el correo aquí...">
                         <button>Suscríbete</button>
                     </div>
                 </div>
@@ -163,5 +164,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/Contacto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

@@ -69,7 +69,6 @@ section{
 }
 /* Contenedor formulario de contacto */
 section .contactForm {
-    border: red thin solid;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
