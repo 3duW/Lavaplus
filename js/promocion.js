@@ -17,4 +17,5 @@ function guardar() {
             console.error(error);
             alert('Error al guardar el correo.');
         });
+    document.getElementById("promForm").reset();
 }
