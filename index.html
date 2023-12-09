@@ -256,6 +256,45 @@
         </div>  
     </div>
 </section>
+
+<!--comentarios-->
+<div class="comments-section">
+    <h2>Comentarios</h2>
+    <form action="" id="commentForm">
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <label for="fecha_emision">Fecha de Emisión:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <div class="form-group">
+        
+        <label for="lavado">Que tan Satisfecho te encuentras con nuestro servicio:</label>
+        <select id="calificacion" required>
+            <option value="Muy Satisfecho">Muy Satisfecho</option>            
+            <option value="Satisfecho">Satisfecho</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Insatisfecho">Insatisfecho</option>                    
+            <option value="Muy Insatisfecho">Muy Insatisfecho</option>
+                                                                    
+        </select>
+            
+        </div>
+        <div class="form-group">
+            <label for="comment">Comentario:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <button  onclick="guardar()" >EMVIAR</button>
+    </form>
+    <div class="comments-list" id="commentsList"></div>
+</div>
+
+
+   <!-- Agrega los otros botones de estrella -->
+
+  <script src="./js/inicio.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <iframe class="footer" src="footer.html" frameborder="0"></iframe>
 </body>
 </html>
