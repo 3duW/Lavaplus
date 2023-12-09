@@ -1,6 +1,12 @@
 
-//Javascrip para Dispositivos moviles //
 
+
+
+
+
+
+
+//esto es del menu responsive //
 const menuBtn = document.querySelector(".menu-btn");
 const navigation = document.querySelector(".navigation");
 
