@@ -1,25 +1,7 @@
+
 const url_api = "http://localhost:9000/api/logins";
 
 
-function guardar() {
-    const correo = document.getElementById("correo").value;
-    const password = document.getElementById("password").value;
-    
-    const data = {
-        correo: correo,
-        password: password
-       
-    };
-
-    axios.post(url_api, data)
-        .then(function (response) {
-            alert("¡El formulario fue enviado correctamente!");
-            console.log(response.data);
-        })
-        .catch(function (error) {
-            console.error(error);
-        });
-}
 
 
 

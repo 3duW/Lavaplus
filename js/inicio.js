@@ -1,3 +1,34 @@
+const url_api = "http://localhost:9000/api/comentarios";
+
+        function guardar() {
+            const data = {
+                cliente: nombre.value,
+                fecha: fecha.value,
+                calificacion: calificacion.value,
+                comentario: comentario.value
+            };
+
+            axios.post(url_api, data)
+                .then(function (response) {
+                    console.log(response.data);
+                    alert('Comenatario Enviado.');
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    alert('No se pudo guardar el comentario');
+                });
+
+            document.getElementById("commentForm").reset();
+        }
+  
+
+
+
+
+
+
+
+
 const menuBtn = document.querySelector(".menu-btn");
 const navigation = document.querySelector(".navigation");
 
@@ -65,4 +96,26 @@ muteButton.addEventListener("click", function() {
     }
 });
 
+//comentarios
+document.getElementById('commentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const fecha = document.getElementById('fecha').value;
+    const stars = document.querySelector('input[name="star-radio"]:checked').value;
+    const comment = document.getElementById('comment').value;
+
+    const newComment = document.createElement('div');
+    newComment.classList.add('comment');
+    newComment.innerHTML = `
+        <strong>${name}</strong> <br>
+        <strong>Fecha: ${fecha}</strong><br>
+        <strong>Calificación: ${stars} estrellas</strong><br>
+        <p>${comment}</p>
+    `;
+
+    document.getElementById('commentsList').appendChild(newComment);
+
+    document.getElementById('commentForm').reset();
+});
 
