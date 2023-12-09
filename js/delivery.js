@@ -75,6 +75,7 @@ function listar() {
     .catch(function (error) {
         console.error(error);
     });
+    document.getElementById("deliveryForm").reset();
 }
 function guardar() {
     const nombre = document.getElementById("nombre").value;
