@@ -718,12 +718,6 @@ section {
 ***********************
 */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  
   .comments-section {
     max-width: 600px;
     margin: 0 auto;
@@ -803,7 +797,7 @@ body {
 
 .footer {
     width: 100% !important;
-    height: 550px !important;
+    height: 580px !important;
 }
 @media (max-width: 1040px){ 
     body {

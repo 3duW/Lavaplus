@@ -1,25 +1,30 @@
 const url_api = "http://localhost:9000/api/comentarios";
 
-function guardar() {
-    const data = {
-        name: nombre.value,
-        fecha: fecha.value,
-        calificacion : calificacion.value,
-        comment: comment.value
-        
-      };
+        function guardar() {
+            const data = {
+                cliente: nombre.value,
+                fecha: fecha.value,
+                calificacion: calificacion.value,
+                comentario: comentario.value
+            };
+
+            axios.post(url_api, data)
+                .then(function (response) {
+                    console.log(response.data);
+                    alert('Comenatario Enviado.');
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    alert('No se pudo guardar el comentario');
+                });
+
+            document.getElementById("commentForm").reset();
+        }
   
-      axios.post(url_api, data)
-          .then(function (response) {
-              console.log(response.data);
-              alert('Registro de Pago Enviado.');
-          })
-          .catch(function (error) {
-              console.error(error);
-              alert('Error al guardar el registro.');
-          });
-      document.getElementById("commentForm").reset();
-  }
+
+
+
+
 
 
 
