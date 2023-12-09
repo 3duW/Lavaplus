@@ -1,24 +1,30 @@
-const url_api = "http://localhost:9000/api/login";
+const url_api = "http://localhost:9000/api/logins";
+
 
 function guardar() {
+    const correo = document.getElementById("correo").value;
+    const password = document.getElementById("password").value;
+    
     const data = {
-        correo: correo.value,
-        contrase: contraseña.value
+        correo: correo,
+        password: password
+       
     };
 
     axios.post(url_api, data)
         .then(function (response) {
+            alert("¡El formulario fue enviado correctamente!");
             console.log(response.data);
-            alert('Correo enviado.');
         })
         .catch(function (error) {
             console.error(error);
-            alert('Error al guardar el correo.');
         });
 }
-  
-//Javascrip para Dispositivos moviles //
 
+
+
+
+//esto es del menu responsive //
 const menuBtn = document.querySelector(".menu-btn");
 const navigation = document.querySelector(".navigation");
 
