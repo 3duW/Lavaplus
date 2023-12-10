@@ -1,4 +1,4 @@
-c// Función para mostrar el mensaje de error en la esquina
+// Función para mostrar el mensaje de error en la esquina
 function mostrarError(mensaje) {
     const errorDiv = document.getElementById('error-message');
     errorDiv.textContent = mensaje;
