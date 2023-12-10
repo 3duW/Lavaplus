@@ -29,6 +29,7 @@ function guardar() {
             console.error(error);
             alert('Error al guardar el Mensaje.');
         });
+        document.getElementById("contacForm").reset();
 }
 
 
