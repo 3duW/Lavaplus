@@ -27,6 +27,7 @@
                 <a href="login.html"><i class='bx bxs-user'></i></a>
             </div>
         </div>
+        
     </header>
     <section class="inicio">
         <div class="media-icons">
@@ -55,21 +56,26 @@
                     <i class='bx bxl-linkedin-square'></i>
                 </div>
                 <p> </p><br><br>
-                <formc class="form">
-                <label>
-                    <i class='bx bx-envelope'></i>
-                    <input type="email" placeholder="Correo Electronico" id="correo">
-                </label>
-                <label>
-                    <i class='bx bx-lock'></i>
-                    <input type="password" placeholder="Contrañesa" id="contraseña">
-                </label>
-                <button onclick="guardar()">Iniciar Sesion</button>
-              </formc>
+                <form class="form">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo Electrónico" id="correo">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock'></i>
+                        <input type="password" placeholder="Contraseña" id="password">
+                    </label>
+                    <button type="button" id="btnIniciarSesion">Iniciar Sesión</button> 
+                    <div class="estilo-message" id="error-message"></div>
+                    <div class="estilo-message" id="success-message"></div>
+                    
+                </form>
+
             </div>
         </div>
     </div>
-    <script src="./js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/register.js"></script>
 </body>
 </html>

@@ -88,6 +88,26 @@ function guardar() {
     const horaRecojo = document.getElementById("horaRecojo").value;
     const instrucciones = document.getElementById("instrucciones").value;
 
+        // Realizar las validaciones aquí antes de enviar la solicitud POST
+        if (nombre.trim() === '' || correo.trim() === '' || telefono.trim() === '' || dni.trim() === '' 
+        || direccion.trim() === '' || distrito.trim() === '' || tipoLavado.trim() === ''
+        || tipoPrenda.trim() === '' || horaRecojo.trim() === '' || instrucciones.trim() === '') {
+            alert('Por favor, complete todos los campos.');
+            return; 
+        }
+    
+        if (isNaN(parseInt(telefono)) || isNaN(parseInt(dni))) {
+            alert('El teléfono y el DNI deben ser números válidos.');
+            return; 
+        }
+    
+        const correoRegex = /^\S+@\S+\.\S+$/;
+        if (!correoRegex.test(correo)) {
+            alert('Ingrese un correo electrónico válido.');
+            return; 
+        }
+    
+
     const data = {
         Nombre: nombre,
         telefono: parseInt(telefono),

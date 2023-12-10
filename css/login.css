@@ -37,6 +37,17 @@ header .brand {
 header .navigation {
     position: relative;
 }
+.estilo-message {
+    position: absolute;
+    bottom: 190px; 
+    left: 50%; 
+    transform: translateX(40%);
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; 
+  }
 header .navigation .navigation-items a {
     position: relative;
     color: #ffffff;

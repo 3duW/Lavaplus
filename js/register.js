@@ -7,6 +7,26 @@ function guardar() {
     const dni = document.getElementById("dni").value;
     const correo = document.getElementById("correo").value;
     const password = document.getElementById("password").value;
+
+        // Validar que los campos obligatorios no estén vacíos
+        if (nombre.trim() === '' || telefono.trim() === '' || dni.trim() === '' || correo.trim() === '' || password.trim() === '') {
+            alert('Por favor, complete todos los campos obligatorios.');
+            return; 
+        }
+    
+        // Validar el formato del DNI y del teléfono (puedes agregar más validaciones según tu necesidad)
+        if (isNaN(parseInt(telefono)) || isNaN(parseInt(dni))) {
+            alert('El DNI y el teléfono deben ser números válidos.');
+            return; 
+        }
+    
+        // Validar el formato del correo electrónico
+        const correoRegex = /^\S+@\S+\.\S+$/;
+        if (!correoRegex.test(correo)) {
+            alert('Ingrese un correo electrónico válido.');
+            return; 
+        }
+        
     
     const data = {
         nombre: nombre,
@@ -26,7 +46,6 @@ function guardar() {
             console.error(error);
         });
 }
-
 
 
 
