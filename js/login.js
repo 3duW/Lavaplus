@@ -33,7 +33,7 @@ document.getElementById('btnIniciarSesion').addEventListener('click', function()
             // Verificar si la respuesta indica que el inicio de sesión es exitoso
             if (respuesta.status === 200) {
                 mostrarExito('Inicio de sesión exitoso');
-              window.location.href = "./Delivery.html";
+              window.location.href = "./index.html";
             } else {
                 console.log('Inicio de sesión fallido');
                 mostrarError('Inicio de sesión fallido. Verifica tus credenciales.');
