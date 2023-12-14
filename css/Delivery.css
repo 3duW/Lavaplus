@@ -48,9 +48,9 @@ header .navigation .navigation-items a {
     position: relative;
     color: #030303;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 20px;
     transition: 0.3s ease;
 }
 header .navigation .navigation-items a:before {
@@ -86,14 +86,14 @@ header .navigation .navigation-items a:hover:before {
     background: url('') no-repeat center center/cover;
     background-size: cover;
     background-position: center top; 
-    color: rgb(247, 253, 253);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 100px 0;
 	font-weight: 800;
 }
 .delivery-options {	
-	width: 70%;
-	margin: auto;
+    width: 70%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; 
@@ -103,46 +103,60 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .option {
-	background: rgb(244, 151, 126);
     width: 30%; 
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #030303;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 8px 16px 3px rgba(0,0,0,0.2); /* Efecto de sombra */
+    background-color: rgba(248, 227, 222, 0.6); /* Color con transparencia */
+    border-radius: 5px;
 }
+
 .option1 {
-	background: rgb(249, 239, 150);
     width: 30%; 
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(250, 248, 226);
+    border-radius: 5px;
 }
 .option2{
-	background: rgb(163, 245, 163);
-    width: 30%;
+    width: 30%; 
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border: none;
+    box-shadow: 5px 20px 15px 8px rgba(0,0,0,0.2);
+    background-color: rgba(231, 246, 247, 0.999);
+    border-radius: 5px;
 }
 .option3 {
-	background: rgb(150, 241, 235);
     width: 30%; 
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(233, 206, 244);
+    border-radius: 5px;
 }
 .option4 {
-	background: rgb(141, 182, 253);
     width: 30%; 
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 11px;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgba(150, 161, 249, 0.6);
+    border-radius: 5px;
 }
 .option5 {
-	background: rgb(143, 143, 247);
+    
     width: 30%; 
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 18.5px;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgb(12, 12, 12);
+    background-color: rgba(246, 194, 240, 0.6);
+    border-radius: 5px;
 }
 
 
@@ -153,7 +167,7 @@ header .navigation .navigation-items a:hover:before {
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background: linear-gradient(to bottom, #cedde8, #deb6b6);
+    background: linear-gradient(to bottom, #c8e4f8, #deb6b6);
 
 }
 .form-container{
