@@ -717,10 +717,47 @@ section {
 *comentarios
 ***********************
 */
+/* Estilos para la clase principal */
+.caja-comentario {
+    margin-top: -32px;
+    display: flex; 
+    flex-direction: row; 
+    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    box-shadow:  4px 4px 20px 4px black;
+
+  }
+  
+  /* Estilos para la clase imagen-portal */
+  .imagen-portal {
+    max-width: 50%; 
+    max-width: 600px;
+    margin: 0 auto;    
+    
+  }
+  
+  /* Estilos para la clase comments-section */
+  .comments-section {
+    max-width: 50%; /* Ocupará como máximo la mitad del ancho */
+    
+  }
+  
+  /* Media query para cambiar el diseño en pantallas pequeñas */
+  @media screen and (max-width: 960px) {
+    .imagen-portal {
+        margin-left: 10px;
+    }
+    .caja-comentario {
+      flex-direction: column; /* Cambiamos a disposición vertical */
+    }
+  }
 
   .comments-section {
     max-width: 600px;
     margin: 0 auto;
+    
   }
   
   .form-group {
