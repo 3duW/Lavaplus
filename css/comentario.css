@@ -10,25 +10,23 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(https://images.pexels.com/photos/8774400/pexels-photo-8774400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://images.pexels.com/photos/5427302/pexels-photo-5427302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     overflow-y: hidden;
 }
 header {
     backdrop-filter: blur(10px);
     z-index: 999;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.8); /* Ajusta el color de fondo del header con transparencia */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px; /* Ajusta el espaciado del padding */
-    transition: 0.5s ease;
+    padding: 15px 200px;
+    transition: 0.5 ease;
 }
-
 #container {
     max-width: 800px;
     margin: 80px auto 20px; /* Ajusta el margen superior para dejar espacio para el header */
@@ -41,7 +39,6 @@ header {
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.9); /* Ajusta el color de fondo del contenedor con transparencia */
 }
-
 header .brand {
     color: #ffffff;
     font-size: 1.5em;
@@ -101,7 +98,7 @@ header .navigation .navigation-items a:hover:before {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #555;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -131,17 +128,18 @@ button:hover {
 }
 
 #comentariosContainer {
-    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    max-height: 600px; /* Ajusta la altura máxima según sea necesario */
+    overflow-y: auto;
+    margin-top: 40px; /* Ajusta el margen superior según sea necesario */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-
 .comment-box {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
+    border: 4px solid #ffffff;
+    padding: 20px;
+    margin: 14px;
     border-radius: 4px;
     width: 300px; /* Ajusta el ancho de cada comentario según tus necesidades */
 }
