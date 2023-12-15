@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/washer-solid-24.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pedidos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;200;300;600&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>pedidos registrados</title>
+</head>
+<body>
+
+    <div id="container">
+        <div class="center-container">
+            <h1>PARA OPTENER SUS PEDIDOS REALISADOS</h1>
+        </div>
+
+        <form id="buscarClienteForm">
+            <label for="dniBuscar">Ingrese su dni:</label>
+            <input type="text" id="dniBuscar" name="dniBuscar">
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultado"></div>
+        <button><a href="./Delivery.html">Regresar</a></button>
+
+    </div>
+    <script src="./js/delivery.js"></script>
+    <script src="./js/pedidos.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

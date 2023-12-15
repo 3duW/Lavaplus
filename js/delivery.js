@@ -1,87 +1,56 @@
 const url_api = "http://localhost:9000/api/deliv";
 
-document.getElementById("buscarClienteForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    const dniCliente = document.getElementById("dniBuscar").value;
+        document.getElementById("buscarClienteForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const dniCliente = document.getElementById("dniBuscar").value;
 
-    mostrarClientePorDNI(dniCliente);
-});
+            mostrarClientePorDNI(dniCliente);
+        });
 
-function mostrarClientePorDNI(dniBuscado) {
-    const resultadoDiv = document.getElementById("resultado");
-    axios.get(url_api)
-    .then(function(response){
-        console.log(response.data); // Revisemos los datos recibidos en la consola
+        function mostrarClientePorDNI(dniBuscado) {
+            const resultadoDiv = document.getElementById("resultado");
+            axios.get(url_api)
+            .then(function(response){
+                const pedidosCliente = response.data.filter(cliente => cliente.dni.toString() === dniBuscado);
 
-        const clienteEncontrado = response.data.find(cliente => cliente.dni.toString() === dniBuscado);
+                if (pedidosCliente.length > 0) {
+                    const tabla = document.createElement("table");
+                    const thead = document.createElement("thead");
+                    const tbody = document.createElement("tbody");
 
-        if (clienteEncontrado) {
-            const tabla = document.createElement("table");
-            const thead = document.createElement("thead");
-            const tbody = document.createElement("tbody");
+                    const encabezados = ["Nombre", "telefono", "Correo", "dni", "distrito", "tipo_servicio", "tipo_prenda", "recojo", "direccion", "comentario"];
+                    const encabezadosRow = document.createElement("tr");
+                    encabezados.forEach(encabezado => {
+                        const th = document.createElement("th");
+                        th.textContent = encabezado;
+                        encabezadosRow.appendChild(th);
+                    });
+                    thead.appendChild(encabezadosRow);
 
-            const encabezados = ["Nombre", "Teléfono", "Correo","dni", "distrito", 
-        "tipo_servicio",  "tipo_prenda", "recojo","direccion", "comentario" ];
-            const encabezadosRow = document.createElement("tr");
-            encabezados.forEach(encabezado => {
-                const th = document.createElement("th");
-                th.textContent = encabezado;
-                encabezadosRow.appendChild(th);
+                    pedidosCliente.forEach(cliente => {
+                        const fila = document.createElement("tr");
+                        encabezados.forEach(encabezado => {
+                            const celda = document.createElement("td");
+                            celda.textContent = cliente[encabezado]; 
+                            fila.appendChild(celda);
+                        });
+                        tbody.appendChild(fila);
+                    });
+
+                    tabla.appendChild(thead);
+                    tabla.appendChild(tbody);
+
+                    resultadoDiv.innerHTML = "";
+                    resultadoDiv.appendChild(tabla);
+                } else {
+                    resultadoDiv.innerHTML = "Cliente no encontrado";
+                }
+            })
+            .catch(function (error) {
+                console.error(error);
             });
-            thead.appendChild(encabezadosRow);
-
-            const fila = document.createElement("tr");
-
-            const celdaNombre = document.createElement("td");
-            celdaNombre.textContent = clienteEncontrado.Nombre;
-            const celdaTelefono = document.createElement("td");
-            celdaTelefono.textContent = clienteEncontrado.telefono;
-            const celdaCorreo = document.createElement("td");
-            celdaCorreo.textContent = clienteEncontrado.Correo;
-            const celdaDni = document.createElement("td");
-            celdaDni.textContent = clienteEncontrado.dni;
-            const celdaDistrito = document.createElement("td");
-            celdaDistrito.textContent = clienteEncontrado.distrito;
-            const celdaTipo_servicio = document.createElement("td");
-            celdaTipo_servicio.textContent = clienteEncontrado.tipo_servicio;
-            const celdaTipo_prenda = document.createElement("td");
-            celdaTipo_prenda.textContent = clienteEncontrado.tipo_prenda;
-            const celdaRecojo = document.createElement("td");
-            celdaRecojo.textContent = clienteEncontrado.recojo;
-            const celdaDireccion = document.createElement("td");
-            celdaDireccion.textContent = clienteEncontrado.direccion;
-            const celdaComentario = document.createElement("td");
-            celdaComentario.textContent = clienteEncontrado.comentario;
-
-            fila.appendChild(celdaNombre);
-            fila.appendChild(celdaTelefono);
-            fila.appendChild(celdaCorreo);
-            fila.appendChild(celdaDni);
-            fila.appendChild(celdaDistrito);
-            fila.appendChild(celdaTipo_servicio);
-            fila.appendChild(celdaTipo_prenda);
-            fila.appendChild(celdaRecojo);
-            fila.appendChild(celdaDireccion);
-            fila.appendChild(celdaComentario);
-
-            tbody.appendChild(fila);
-
-            tabla.appendChild(thead);
-            tabla.appendChild(tbody);
-
-            resultadoDiv.innerHTML = "";
-            resultadoDiv.appendChild(tabla);
-        } else {
-            resultadoDiv.innerHTML = "Cliente no encontrado";
         }
-    })
-    .catch(function (error) {
-        console.error(error);
-    });
-}
-
-
 function guardar() {
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
@@ -141,7 +110,5 @@ function guardar() {
 const menuBtn = document.querySelector(".menu-btn");
 const navigation = document.querySelector(".navigation");
 
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    navigation.classList.toggle("active");
-});
+
+

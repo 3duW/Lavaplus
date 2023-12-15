@@ -243,38 +243,6 @@ header .navigation .navigation-items a:hover:before {
     margin-bottom: 10px;
 }
 
-#resultado table {
-    border-collapse: collapse;
-    width: 50%;
-    max-width: 200px; 
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #dfd9db, #d9d4d4);
-  }
-  
-  /* Aca se ajusta los estilos de las celdas y filas */
-  #resultado th, #resultado td {
-    border: 1px solid #bccace;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  /*Dar estilo a los encabesados */
-  #resultado th {
-    color: #ffffff;
-    background-color: #000000;
-  }
-
-/* Hacer la tabla responsive en dispositivos pequeños */
-@media screen and (max-width: 200px) {
-    #resultado table {
-      overflow-x: auto;
-    }
-    #resultado th, #resultado td {
-      white-space: nowrap; 
-      overflow: hidden;
-      text-overflow: ellipsis; 
-    }
-  }
 
 
 
@@ -449,7 +417,22 @@ header .navigation .navigation-items a:hover:before {
 	font-weight: 400;
 	font-size: 1.6rem;
 }
+p {
+    text-align: center;
+}
 
+p a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #45a049;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #4CAF50;
+}
 /* Estilos para pantallas de tamaño mediano */
 @media screen and (max-width: 768px) {
     .hero-section {
@@ -506,6 +489,7 @@ header .navigation .navigation-items a:hover:before {
         padding: 20px;
     }
 }
+
 
 /* Estilos para pantallas de tamaño mediano */
 @media screen and (max-width: 768px) {

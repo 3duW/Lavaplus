@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://media.istockphoto.com/id/857747340/es/foto/chapoteo-de-agua-del-tambor-lavadora.jpg?s=612x612&w=0&k=20&c=t6QRYel6atmV6fc-FFdk-XEEcjab1R-Aj3pyZkbB21w=);
+    background-size: 100% 100%;
+    overflow-y: hidden;
+    margin: 0;
+    
+}
+
+/* Estilos del encabezado */
+
+
+.brand {
+    color: #f6f2f2;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+/* Contenedor principal */
+#container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: rgba(208, 230, 241, 0.9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Estilos para el contenido centrado */
+.center-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+/* Estilos para el botón con enlace */
+button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #2a2e2e, #86f8f6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    text-align: center;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background: linear-gradient(to right, #4046f0, #2e63f6);
+}
+/* Estilos para mostrar resultados */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    max-height: 300px; /* Altura máxima de la sección */
+    overflow-y: auto; /* Permitimos el desplazamiento vertical */
+    overflow-x: hidden; /* Ocultamos el desplazamiento horizontal */
+}
+
+/* Estilos para la tabla de resultados */
+#resultado table {
+    width: 700px;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#resultado th,
+#resultado td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+#resultado th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+/* Hacer la tabla responsive en dispositivos pequeños */
+@media screen and (max-width: 200px) {
+    #resultado table {
+      overflow-x: auto;
+    }
+    #resultado th, #resultado td {
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+  }
+
+
