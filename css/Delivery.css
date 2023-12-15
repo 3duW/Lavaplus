@@ -248,7 +248,7 @@ header .navigation .navigation-items a:hover:before {
     width: 50%;
     max-width: 200px; 
     margin-bottom: 20px;
-    background: linear-gradient(45deg, #f7eaee, #fbb7be);
+    background: linear-gradient(45deg, #dfd9db, #d9d4d4);
   }
   
   /* Aca se ajusta los estilos de las celdas y filas */
@@ -260,7 +260,8 @@ header .navigation .navigation-items a:hover:before {
   
   /*Dar estilo a los encabesados */
   #resultado th {
-    background-color: #8ef3fc;
+    color: #ffffff;
+    background-color: #000000;
   }
 
 /* Hacer la tabla responsive en dispositivos pequeños */

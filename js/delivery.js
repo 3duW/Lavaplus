@@ -3,16 +3,18 @@ const url_api = "http://localhost:9000/api/deliv";
 document.getElementById("buscarClienteForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
-    const correoCliente = document.getElementById("correoBuscar").value;
+    const dniCliente = document.getElementById("dniBuscar").value;
 
-    mostrarClientePorCorreo(correoCliente);
+    mostrarClientePorDNI(dniCliente);
 });
 
-function mostrarClientePorCorreo(correoBuscado) {
+function mostrarClientePorDNI(dniBuscado) {
     const resultadoDiv = document.getElementById("resultado");
     axios.get(url_api)
     .then(function(response){
-        const clienteEncontrado = response.data.find(cliente => cliente.Correo === correoBuscado);
+        console.log(response.data); // Revisemos los datos recibidos en la consola
+
+        const clienteEncontrado = response.data.find(cliente => cliente.dni.toString() === dniBuscado);
 
         if (clienteEncontrado) {
             const tabla = document.createElement("table");
@@ -77,7 +79,6 @@ function mostrarClientePorCorreo(correoBuscado) {
     .catch(function (error) {
         console.error(error);
     });
-    document.getElementById("deliveryForm").reset();
 }
 
 
