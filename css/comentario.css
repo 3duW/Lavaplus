@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/8774400/pexels-photo-8774400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    overflow-y: hidden;
+}
+header {
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8); /* Ajusta el color de fondo del header con transparencia */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Ajusta el espaciado del padding */
+    transition: 0.5s ease;
+}
+
+#container {
+    max-width: 800px;
+    margin: 80px auto 20px; /* Ajusta el margen superior para dejar espacio para el header */
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Ajusta el color de fondo del contenedor con transparencia */
+}
+
+header .brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation {
+    position: relative;
+}
+.estilo-message {
+    position: absolute;
+    bottom: 190px; 
+    left: 50%; 
+    transform: translateX(40%);
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; 
+  }
+  .estilo-exito {
+    position: absolute;
+    bottom: 190px; 
+    left: 50%; 
+    transform: translateX(40%);
+    background-color: rgb(7, 240, 104);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; 
+  }
+header .navigation .navigation-items a {
+    position: relative;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    width: 0;
+    height: 3px; /* Corregir el valor 'px' aquí */
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+    height: 2px;
+}
+#container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Agregado para cambiar la posición relativa */
+    top: 50px; /* Ajusta la posición según sea necesario */
+}
+#container .center-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #45a049, #4CAF50);
+}
+
+#comentariosContainer {
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.comment-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    width: 300px; /* Ajusta el ancho de cada comentario según tus necesidades */
+}
