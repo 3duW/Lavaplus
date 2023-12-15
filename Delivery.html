@@ -101,7 +101,13 @@
                     <label for="instrucciones">Instrucciones Específicas:</label>
                     <textarea id="instrucciones" rows="4" cols="50" placeholder="Indique instrucciones específicas sobre el lavado o cuidado de ciertas prendas"></textarea><br>
                     <button type="button" onclick="guardar()">Enviar</button>
-                    <button type="button" onclick="listar()">Ver</button>
+                    
+                </form>
+
+                <form id="buscarClienteForm">
+                    <label for="correoBuscar">Ingrese el correo del cliente:</label>
+                    <input type="email" id="correoBuscar" name="correoBuscar">
+                    <button type="submit">Buscar Cliente</button>
                 </form>
                 <div id="resultado"></div>
             </div>
