@@ -1,4 +1,5 @@
-const url_api = "http://localhost:9000/api/promo"
+const url_api = ENDPOINTS.promociones;
+
 
 function guardar() {
  

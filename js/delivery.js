@@ -1,4 +1,6 @@
-const url_api = "http://localhost:9000/api/deliv";
+const url_api = ENDPOINTS.deliv; 
+
+
 
         document.getElementById("buscarClienteForm").addEventListener("submit", function(event) {
             event.preventDefault();

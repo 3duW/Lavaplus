@@ -1,4 +1,4 @@
-const url_api = "http://localhost:9000/api/comentarios";
+const url_api = ENDPOINTS.coment;
 
         function guardar() {
             const data = {

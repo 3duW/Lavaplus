@@ -1,4 +1,5 @@
-const url_api = "http://localhost:9000/api/fac"
+const url_api = ENDPOINTS.fac;
+
 
 function guardar() {
   const data = {

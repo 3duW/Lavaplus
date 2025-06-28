@@ -1,4 +1,6 @@
-const url_api = "http://localhost:9000/api/cont"
+const url_api = ENDPOINTS.cont;
+
+
 
 function validar() {
     if (!nombre.value || !correo.value || !telefono.value || !dni.value || !direccion.value || !asunto.value) {

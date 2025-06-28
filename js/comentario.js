@@ -1,4 +1,5 @@
-const url_api = "http://localhost:9000/api/comentarios";
+const url_api = ENDPOINTS.coment;
+
 const comentariosContainer = document.getElementById("comentariosContainer");
 
 function listar() {
