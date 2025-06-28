@@ -1,7 +1,5 @@
 const url_api = ENDPOINTS.register;
 
-
-
 function guardar() {
     const nombre = document.getElementById("nombre").value;
     const telefono = document.getElementById("telefono").value;

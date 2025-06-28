@@ -29,6 +29,7 @@ document.getElementById('btnIniciarSesion').addEventListener('click', function()
     // Usa el endpoint del config
     const urlInicioSesion = ENDPOINTS.login;
 
+
     axios.post(urlInicioSesion, datosUsuario)
         .then((respuesta) => {
             if (respuesta.status === 200) {

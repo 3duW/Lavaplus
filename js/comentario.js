@@ -1,5 +1,6 @@
 const url_api = ENDPOINTS.coment;
 
+
 const comentariosContainer = document.getElementById("comentariosContainer");
 
 function listar() {
